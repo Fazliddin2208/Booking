@@ -1,0 +1,203 @@
+$main-color: #01517f;
+$second-color: #0589a3;
+$third-color: #f5b31a;
+
+.profile{
+    margin-top: 60px;
+    padding: 50px 10%;
+    background-color: #fff;
+    display: flex;
+    gap: 50px;
+
+    select{
+        padding: 10px;
+        margin-left: auto;
+        min-width: 150px;
+        border: 1px solid #454646;
+        border-radius: 10px;
+    }
+
+    &__sidebar{
+        ul{
+            list-style: none;
+            padding: 20px 0;
+            border-radius: 10px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,.05);
+            min-width: 270px;
+            li{
+                p, a{
+                    padding: 0 20px;
+                    font-size: 18px;
+                    color: $second-color;
+                    font-weight: 500;
+                    margin: 0;
+                    cursor: pointer;
+                    text-decoration: none;
+                    display: block;
+                    width: auto;
+
+                    &.active{
+                        transform: translateX(20px);
+                        color: $main-color;
+                    }
+
+                    svg{
+                        font-size: 25px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__account{
+        width: 100%;
+
+        h3{
+            text-align: center;
+            font-size: 22px;
+            color: $main-color;
+        }
+
+        &__infos{
+            display: flex;
+            justify-content: space-between;
+
+            &__row{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                input{
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    min-width: 300px;
+                    border-radius: 7px;
+                    border: 2px solid $main-color;
+                    color: $second-color;
+                    font-weight: 500;
+                    font-size: 17px;
+                }
+
+                div{
+                    input{
+                        padding-right: 25px;
+                    }
+                    svg{
+                        position: absolute;
+                        margin-left: -25px;
+                        margin-top: 10px;
+                        cursor: pointer;
+                    }
+                }
+
+                button{
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    &__reservations{
+
+        
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &__reserv{
+
+            box-shadow: 0 0 15px rgba(0,0,0,.05);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+
+            &__left{
+                width: 350px;
+                img{
+                    height: auto;
+                    width: 100%;
+                }
+
+            }
+
+            &__right{
+                // box-shadow: 0 0 15px rgba(0,0,0,.05);
+                width: calc(100% - 400px);
+                
+
+                &__top{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    button{
+                        &.pending{
+                            background: $third-color;
+                        }
+                        &.confirmed{
+                            background: #18b60a;
+                        }
+                    }
+                }
+
+                &__row{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 10px;
+                    p{
+                        font-size: 16px;
+                        // width: 100%;
+
+                        &:first-child{
+                            margin-right: 10px;
+                        }
+                        &:last-child{
+                            margin-left: 10px;
+                            font-size: 17px;
+                            font-weight: 500;
+                        }
+
+                        
+                        // width: 280px;
+                    }
+                    span{
+                        border: 1px dashed #454646;
+                        display: flex;
+                        flex: 1 1;
+                        width: 100%;
+                    }
+
+                    button{
+                        padding: 10px;
+                        min-width: 80px;
+
+                        &.danger{
+                            background: rgb(245, 31, 31);
+                        }
+                        &.edit{
+                            background: $third-color;
+                        }
+                        &.success{
+                            background: rgb(40, 172, 7);
+                        }
+                    }
+
+                    &__right{
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                }
+            }
+        }
+    }
+}
